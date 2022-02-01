@@ -1,0 +1,36 @@
+/* adding colors and different fonts as we go. 
+basic skeleton for us to start building off. 
+plz dont mind the ugly appearnce thus far lol
+ */
+
+
+
+
+ .container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Supermercado One', cursive;
+}
+header {
+    background-color: rgb(41, 235, 66);
+    color:black;
+}
+.searchContainer {
+    display:flex;
+    flex-direction: column;
+    align-items:space-between;
+    padding: 10px;
+    margin-bottom:5px;
+}
+.cryptoInfo {
+    display:flex;
+    flex-direction:row;
+    align-items:space-evenly;
+}
+.icon {
+    border:2px solid black;
+}
