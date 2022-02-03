@@ -6,23 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CryptGo</title>
-    <script src="https://kit.fontawesome.com/7ce0dd93d0.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="header">
-            <h1 class="title">CryptGo</h1>
-        </div>
-        <div class="searchContainer">
-            <label for="search">Browse..</label>
-            <input name="search" type="text" placeholder="search crypto">
-            <button><i class="fas fa-search-dollar"></i></button>
-        </div>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand">cryptGo</a>
+              <form class="d-flex input-group w-auto">
+                <input
+                  type="search"
+                  class="form-control rounded"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="search-addon"
+                />
+                <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search-dollar"></i>
+                </span>
+              </form>
+            </div>
+          </nav>
+            
+    
         <div class="cryptoInfo">
             <div class="icon">BTC $38,834.00 would be hidden until the search button is clicked, generated dynamically</div>
             <div class="info">+ 374.90 (0.99%)Today .this is where the current pricing and up and down would be, same hidden until user clicks search</div>
