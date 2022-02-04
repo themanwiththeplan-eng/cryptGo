@@ -10,40 +10,51 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-light bg-light">
+    
+        <nav class="navbar navbar-light ">
             <div class="container-fluid">
               <a class="navbar-brand">cryptGo</a>
               <form class="d-flex input-group w-auto">
                 <input
                   type="search"
                   class="form-control rounded"
-                  placeholder="Search"
+                  placeholder="search"
                   aria-label="Search"
                   aria-describedby="search-addon"
-                />
-                <span class="input-group-text border-0" id="search-addon">
+                /><button type="button">
                     <i class="fas fa-search-dollar"></i>
-                </span>
+                </span></button>
               </form>
             </div>
           </nav>
             
-    
+          <div class="container">
         <div class="cryptoInfo">
-            <div class="icon">BTC $38,834.00 would be hidden until the search button is clicked, generated dynamically</div>
-            <div class="info">+ 374.90 (0.99%)Today .this is where the current pricing and up and down would be, same hidden until user clicks search</div>
-        </div>
+            <!-- <div class="icon">BTC $38,834.00 would be hidden until the search button is clicked, generated dynamically</div> -->
+            <!-- <div class="info">+ 374.90 (0.99%)Today .this is where the current pricing and up and down would be, same hidden until user clicks search</div> -->
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">coinName</h5>
+                <p class="card-text">current price </p>
+                <button type="button" class="btn"><i class="fas fa-heart"></i></button>
+              </div>
+            </div>
+        
+          </div>
         <div class="newsInfo">
            Bitcoin maxi jack dorsey slams facebook over "wasted effort & time" This is where the news would be.also would be hidden until user clicks search
         </div>
+          </div>
+        <div id="footer">
+          <button type="button" class="btn">View My Favorites</i></button>
+        </div>
+       
 
 
-    </div>
 </body>
 
 </html>
