@@ -15,6 +15,7 @@ body {
     align-items: space-between;
     align-items: center;
     margin: 80px auto;
+    display: none;
 }
 .fas {
     color: whitesmoke;
