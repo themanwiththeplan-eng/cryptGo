@@ -1,12 +1,5 @@
-/* adding colors and different fonts as we go. 
-basic skeleton for us to start building off. 
-plz dont mind the ugly appearnce thus far lol
- */
-
-
-
 body {
-    background-color: whitesmoke;
+    background-color: grey;
  
 }
  .container{
@@ -16,21 +9,23 @@ body {
     align-items: center;
     margin: 100px auto;
     display: none;
+    color:#39FF13;
 
 }
 .fas {
-    color: whitesmoke;
+    color: black;
 }
 .navbar {
 
-    background-color: #ff9900;
-    color:#146eb4;
+    background-color: black;
+    color:#39FF13;
+    text-shadow: 2px 2px white;
     font-family: 'roboto', sans-serif;
    font-weight:bold;
     font-size: 18px;
 }
 .navbar button {
-    background-color: #146eb4;
+    background-color: #39FF13;
     border-radius: 2px;
 }
 
@@ -44,21 +39,26 @@ body {
 .card-body {
     width: 200px;
     height: 200px;
-    
+    border:2px solid black;
+    background-color: white;
 }
+   
 .btn {
-    background-color: #146eb4;
+    background-color: #39FF13;
     border-radius: 5px;
-    color:whitesmoke;
+    color:black;
     
 }
 .newsInfo {
     display:flex;
     flex-direction: column;
+    color:black;
+    font-family:'roboto', sans-serif;
+    font-weight: bold;
 }
 #footer {
-    background-color: #ff9900;
-    color:whitesmoke;
+    background-color:black ;
+    color:black;
     display:flex;
     flex-direction:row;
     justify-content:center;
