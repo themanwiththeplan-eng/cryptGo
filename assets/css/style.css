@@ -3,10 +3,8 @@ basic skeleton for us to start building off.
 plz dont mind the ugly appearnce thus far lol
  */
 
-
-
 body {
-    background-color: whitesmoke;
+    background-color: #EDEDF4;
  
 }
  .container{
@@ -23,14 +21,15 @@ body {
 }
 .navbar {
 
-    background-color: #ff9900;
-    color:#146eb4;
-    font-family: 'roboto', sans-serif;
-   font-weight:bold;
+    background-color: #064780;
+    color:#A0C2DE;
+    /*font-family: 'roboto', sans-serif;*/
+    font-weight:bold;
     font-size: 18px;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
 }
 .navbar button {
-    background-color: #146eb4;
+    background-color: #A0C2DE;
     border-radius: 2px;
 }
 
@@ -57,7 +56,7 @@ body {
     flex-direction: column;
 }
 #footer {
-    background-color: #ff9900;
+    background-color: #064780;
     color:whitesmoke;
     display:flex;
     flex-direction:row;
@@ -66,3 +65,48 @@ body {
     width: 100%;
     bottom:0;
 }
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+ 
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  }
