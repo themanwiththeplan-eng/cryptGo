@@ -1,36 +1,111 @@
-/* adding colors and different fonts as we go. 
-basic skeleton for us to start building off. 
-plz dont mind the ugly appearnce thus far lol
- */
-
-
-
-
+body {
+    background-color: #EDEDF4;
+ 
+}
  .container{
     display:flex;
     flex-direction: column;
+    align-items: space-between;
     align-items: center;
+    margin: 100px auto;
+    display: none;
+
+}
+.fas {
+    color: whitesmoke;
+}
+.navbar {
+
+    background-color: #064780;
+    color:#A0C2DE;
+    text-shadow:1px 1px whitesmoke;
+    /*font-family: 'roboto', sans-serif;*/
+    font-weight:bold;
+    font-size: 18px;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+.navbar button {
+    background-color: #A0C2DE;
+    border-radius: 2px;
 }
 
-.title {
-    font-family: 'Supermercado One', cursive;
-}
-header {
-    background-color: rgb(41, 235, 66);
-    color:black;
-}
-.searchContainer {
-    display:flex;
-    flex-direction: column;
-    align-items:space-between;
-    padding: 10px;
-    margin-bottom:5px;
-}
 .cryptoInfo {
     display:flex;
+    justify-content: center;
     flex-direction:row;
     align-items:space-evenly;
+    margin: 40px;
 }
-.icon {
-    border:2px solid black;
+.card-body {
+    width: 200px;
+    height: 200px;
+    color:#146eb4;
+    
 }
+.btn {
+    background-color: #146eb4;
+    border-radius: 5px;
+    color:whitesmoke;
+    
+}
+.newsInfo {
+    display:flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+#footer {
+    background-color: #064780;
+    color:whitesmoke;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    position:fixed;
+    width: 100%;
+    bottom:0;
+}
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color:#A0C2DE; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+ 
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  }
