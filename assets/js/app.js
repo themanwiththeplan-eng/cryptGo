@@ -1,12 +1,15 @@
 // vars to ref elements
-let buttonEl = document.querySelector('#search');
-let userInputEl = document.querySelector('#input');
-let cardTextEl = document.querySelector('.card-text');
-let cardTitleEl = document.querySelector('.card-title');
+const buttonEl = document.querySelector('#search');
+const userInputEl = document.querySelector('#input');
+const cardTextEl = document.querySelector('.card-text');
+const cardTitleEl = document.querySelector('.card-title');
 const containerEl = document.querySelector(".container");
 const newsEl = document.querySelector(".newsInfo");
-// variables
+const favoriteBtnEl = document.querySelector('.btn');
 
+
+// variables
+const favoritesList = localStorage.getItem("fave")?JSON.parse(localStorage.getItem("fave")): [];
 
 // functions
 function displayCoin(userCoin) {
@@ -59,6 +62,8 @@ function tickerFunc(userCoin){
                 return response.json();
             }).then(function(data){
                 console.log(data);
+                // trying to empty the div each time a card is created 
+                // $('.newsInfo').empty(); 
                 for(let i = 0; i < 3; i++){
                     const card = document.createElement("div");
                     card.setAttribute("class", "card");
@@ -87,7 +92,19 @@ function tickerFunc(userCoin){
         
         
 }
-
+function saveFavorite() {
+    let userCoin = cardTitleEl.innerHTML;
+    if(!favoritesList.includes(userCoin)){
+        favoritesList.push(userCoin);
+        var faveItem = document.createElement('li');
+        faveItem.classList.add('favorites');
+        faveItem.textContent = userCoin;
+        $('#favoriteList').append(faveItem);
+    };
+    localStorage.setItem("fave", JSON.stringify(favoritesList));
+    console.log(favoritesList);
+}
 
 // add event listeners
 buttonEl.addEventListener('click', searchCoin);
+favoriteBtnEl.addEventListener('click', saveFavorite);

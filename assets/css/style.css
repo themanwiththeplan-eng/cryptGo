@@ -109,6 +109,12 @@ body {
       height: 200px;
       margin-bottom: 8px;
   }
+  .favorites {
+      list-style-type: none;
+      color:#146eb4;
+      font-weight: bold;
+      font-family: 'IBM Plex Sans Thai', sans-serif;
+  }
   
   #main {
     transition: margin-left .5s;
