@@ -2,71 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptGo</title>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptGo</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    
-        <nav class="navbar navbar-light ">
-            <div class="container-fluid">
-              <a class="navbar-brand">cryptGo</a>
-              <form class="d-flex input-group w-auto">
-                <input id="input"
-                  type="search"
-                  class="form-control rounded"
-                  placeholder="search"
-                  aria-label="Search"
-                  aria-describedby="search-addon"
-                /><button id=search type="button">
-                    <i class="fas fa-search-dollar"></i>
-                </span></button>
-              </form>
-            </div>
+
+  <nav class="navbar navbar-light ">
+    <div class="container-fluid">
+      <a class="navbar-brand">cryptGo</a>
+      <form class="d-flex input-group w-auto">
+        <input id="input" type="search" class="form-control rounded" placeholder="search" aria-label="Search"
+          aria-describedby="search-addon" /><button id=search type="button">
+          <i class="fas fa-search-dollar"></i>
+          </span></button>
+      </form>
+    </div>
   </nav>
-          <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Favorites</a>
-          </div>
-          
-          <!-- Use any element to open the sidenav -->
-<span onclick="openNav()"><i class="far fa-star"></i></span>
-            
-          <div class="container">
-        <div class="cryptoInfo">
-            <!-- <div class="icon">BTC $38,834.00 would be hidden until the search button is clicked, generated dynamically</div> -->
-            <!-- <div class="info">+ 374.90 (0.99%)Today .this is where the current pricing and up and down would be, same hidden until user clicks search</div> -->
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <button type="button" class="btn"><i class="fas fa-heart"></i></button>
-              </div>
-            </div>
-        
-          </div>
-        <div class="newsInfo">
-           
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">My Favorites</a>
+    <ul id="favoriteList" class="favorites">
+
+    </ul>
+  </div>
+
+  <!-- Use any element to open the sidenav -->
+  <span onclick="openNav()"><i class="far fa-star"></i></span>
+
+  <div class="container">
+    <div class="cryptoInfo">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+
+          <p class="card-text"></p>
+          <button type="button" class="btn"><i class="fas fa-heart"></i></button>
         </div>
-</div>
-       
-         <div id="footer">
-           <p>
-             Learn More About cryptGo
-           </p>
-          <!--<div class="footer-bar">-->
-          </div>
-        
-      
-       
-<script src="./assets/js/app.js"></script>
+      </div>
+
+    </div>
+    <div class="newsInfo">
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>
+      Learn More About cryptGo
+    </p>
+  </div>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="./assets/js/app.js"></script>
 
 </body>
 
