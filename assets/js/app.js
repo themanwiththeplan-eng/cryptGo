@@ -14,6 +14,7 @@ function displayCoin(userCoin) {
         .then(function (response) {
             return (response).json();
         }).then(function (data) {
+            userInputEl.value = '';
             for (let x in data) {
                 console.log(data[x].usd);
                 containerEl.style.display = "block";
@@ -32,13 +33,13 @@ function searchCoin(userCoin) {
 }
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.querySelector("#mySidenav").style.width = "250px";
+    
   }
 
   function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
+    document.querySelector("#mySidenav").style.width = "0";
+    
   }
 
 function tickerFunc(userCoin){
@@ -47,8 +48,10 @@ function tickerFunc(userCoin){
         .then(function(response){
             return response.json();
         }).then(function(data){
-            console.log(data);
+            console.log(data.tickers[0].base);
+            let ticker = data.tickers[0].base;
         })
+        
 }
 
 
