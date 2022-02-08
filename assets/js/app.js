@@ -4,6 +4,7 @@ let userInputEl = document.querySelector('#input');
 let cardTextEl = document.querySelector('.card-text');
 let cardTitleEl = document.querySelector('.card-title');
 const containerEl = document.querySelector(".container");
+const newsEl = document.querySelector(".newsInfo");
 // variables
 
 
@@ -50,7 +51,40 @@ function tickerFunc(userCoin){
         }).then(function(data){
             console.log(data.tickers[0].base);
             let ticker = data.tickers[0].base;
+            const nomicsKey = `48cae1b5e956a83e976e6da5e3ec8b2def23879f`
+            let nomicsUrl = `https://api.nomics.com/v1/currencies/ticker?key=${nomicsKey}&platform-currency=${ticker}&attributes=id,name`
+
+        fetch(nomicsUrl)
+            .then(function(response){
+                return response.json();
+            }).then(function(data){
+                console.log(data);
+                for(let i = 0; i < 3; i++){
+                    const card = document.createElement("div");
+                    card.setAttribute("class", "card");
+                    const cardBody = document.createElement('div');
+                    cardBody.setAttribute('class', 'card-body');
+                    const h5 = document.createElement("h5");
+                    let nomicsName = data[i].name;
+                    h5.textContent = nomicsName;
+                    let nomicsId = data[i].id;
+                    const p = document.createElement('p');
+                    p.textContent = nomicsId;
+                    let nomicsPrice = data[i].price;
+                    const p2 = document.createElement('p');
+                    p2.textContent = nomicsPrice;
+                    newsEl.appendChild(card);
+                    card.appendChild(cardBody);
+                    cardBody.appendChild(h5);
+                    cardBody.appendChild(p);
+                    cardBody.appendChild(p2);
+
+
+                }
+            })
+            
         })
+        
         
 }
 
