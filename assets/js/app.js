@@ -28,6 +28,7 @@ function displayCoin(userCoin) {
 function searchCoin(userCoin) {
     var userCoin = userInputEl.value.trim();
     displayCoin(userCoin);
+    tickerFunc(userCoin);
 }
 
 function openNav() {
@@ -39,6 +40,17 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
   }
+
+function tickerFunc(userCoin){
+    let tickerUrl = `https://api.coingecko.com/api/v3/coins/${userCoin}/tickers`
+    fetch(tickerUrl)
+        .then(function(response){
+            return response.json();
+        }).then(function(data){
+            console.log(data);
+        })
+}
+
 
 // add event listeners
 buttonEl.addEventListener('click', searchCoin);
