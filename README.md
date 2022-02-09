@@ -29,6 +29,7 @@ The cryptGO team also used md bootstrap and CSS Flexbox and custom-styling  to c
 
 ## Demo
 ** Below is a short demo of our application.
+
 ![CryptGo (2)](https://user-images.githubusercontent.com/92121595/153290616-a04b8b78-9558-4c5f-9898-0c9f6a42d6dc.gif)
 
 ## Future Development
