@@ -63,7 +63,7 @@ function tickerFunc(userCoin){
             }).then(function(data){
                 console.log(data);
                 // trying to empty the div each time a card is created 
-                // $('.newsInfo').empty(); 
+                newsEl.innerHTML = ''; 
                 for(let i = 0; i < 3; i++){
                     const card = document.createElement("div");
                     card.setAttribute("class", "card");
