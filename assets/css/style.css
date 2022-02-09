@@ -85,7 +85,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s;
   }
@@ -111,10 +111,12 @@ body {
   }
   .favorites {
       list-style-type: none;
-      color:#146eb4;
+      color:#064780;
       font-weight: bold;
       font-family: 'IBM Plex Sans Thai', sans-serif;
   }
+ 
+  
   
   #main {
     transition: margin-left .5s;
