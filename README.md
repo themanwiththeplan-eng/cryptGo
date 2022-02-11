@@ -35,4 +35,4 @@ The cryptGO team also used md bootstrap and CSS Flexbox and custom-styling  to c
 ## Future Development
 The cryptGo app has several plans for future development.  The main one being able to display breaking news crypto headlines alongside the searched coin.In the footer there is an empty link that will evetually lead to other resources for users to learn more about crypto.  
 
-## Here is a link to the live deployed site
+## Here is a link to the live deployed site:https://themanwiththeplan-eng.github.io/cryptGo/
