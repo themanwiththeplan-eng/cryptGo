@@ -48,7 +48,7 @@ function closeNav() {
 }
 
 function tickerFunc(userCoin) {
-    let tickerUrl = `https://api.coingecko.com/api/v3/coins/${userCoin}/tickers`
+    const tickerUrl = `https://api.coingecko.com/api/v3/coins/${userCoin}/tickers`
     fetch(tickerUrl)
         .then(function (response) {
             return response.json();
@@ -56,7 +56,7 @@ function tickerFunc(userCoin) {
             console.log(data.tickers[0].base);
             let ticker = data.tickers[0].base;
             const nomicsKey = `48cae1b5e956a83e976e6da5e3ec8b2def23879f`
-            let nomicsUrl = `https://api.nomics.com/v1/currencies/ticker?key=${nomicsKey}&platform-currency=${ticker}&attributes=id,name`
+            const nomicsUrl = `https://api.nomics.com/v1/currencies/ticker?key=${nomicsKey}&platform-currency=${ticker}&attributes=id,name`
 
             fetch(nomicsUrl)
                 .then(function (response) {
