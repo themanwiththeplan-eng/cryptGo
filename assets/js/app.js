@@ -106,7 +106,32 @@ function newsFunc(userCoin){
                 .then(function(response){
                     return response.json();
                 }).then(function(data){
+                    newsEl.innerHTML = '';
                     console.log(data);
+                    const card = document.createElement('div');
+                    card.setAttribute("class", "card");
+                    const cardBody = document.createElement('div');
+                    cardBody.setAttribute('class', 'card-body');
+                    const h5 = document.createElement('h5');
+                    h5.textContent = `24 Hour Market High for ${userCoin}`;
+                    const p = document.createElement('p');
+                    p.textContent = data.high_24h;
+                    newsEl.appendChild(card);
+                    card.appendChild(cardBody);
+                    cardBody.appendChild(h5);
+                    cardBody.appendChild(p);
+                    const card2 = document.createElement('div');
+                    card2.setAttribute("class", "card");
+                    const cardBody2 = document.createElement('div');
+                    cardBody2.setAttribute('class', 'card-body');
+                    const h52 = document.createElement('h5');
+                    h52.textContent = `24 Hour Market Low for ${userCoin}`;
+                    const p2 = document.createElement('p');
+                    p2.textContent = data.low_24h;
+                    newsEl.appendChild(card2);
+                    card2.appendChild(cardBody2);
+                    cardBody2.appendChild(h52);
+                    cardBody2.appendChild(p2);
                 })
             
         })
@@ -119,7 +144,7 @@ function testEventListener(e) {
     console.log(searchItem);
     closeNav();
     displayCoin(searchItem);
-    tickerFunc(searchItem);
+    newsFunc(searchItem);
 
 }
 function saveFavorite() {
