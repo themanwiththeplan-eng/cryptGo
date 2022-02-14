@@ -94,20 +94,23 @@ function closeNav() {
 
 // }
 function newsFunc(userCoin){
-    const apiKey = `b37697bddf6548d495a3cd841f62176b`
-    const apiUrl = `https://newsapi.org/v2/everything?q=${userCoin}&apiKey=${apiKey}`;
-
-    fetch(apiUrl)
+    const tickerUrl = `https://api.coingecko.com/api/v3/coins/${userCoin}/tickers`;
+    fetch(tickerUrl)
         .then(function(response){
-            return response.json();
+            return response.json()
         }).then(function(data){
-            console.log(data);
-            console.log(data.articles);
-            for(let i = 0; i < 3; i++){
-                console.log(data.articles[i].url);
-                
-            }
+            let ticker = data.tickers[0].base;
+            let apiKey = `0cc372cef6187d00`
+            let apiUrl = `https://coinlib.io/api/v1/coin?key=${apiKey}&pref=USD&symbol=${ticker}`;
+            fetch(apiUrl)
+                .then(function(response){
+                    return response.json();
+                }).then(function(data){
+                    console.log(data);
+                })
+            
         })
+            
 }
 
 function testEventListener(e) {
